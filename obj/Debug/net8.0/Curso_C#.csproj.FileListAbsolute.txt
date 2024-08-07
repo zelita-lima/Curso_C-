@@ -1,0 +1,14 @@
+C:\Users\Aluno Noite\source\repos\Curso_C#\bin\Debug\net8.0\Curso_C#.exe
+C:\Users\Aluno Noite\source\repos\Curso_C#\bin\Debug\net8.0\Curso_C#.deps.json
+C:\Users\Aluno Noite\source\repos\Curso_C#\bin\Debug\net8.0\Curso_C#.runtimeconfig.json
+C:\Users\Aluno Noite\source\repos\Curso_C#\bin\Debug\net8.0\Curso_C#.dll
+C:\Users\Aluno Noite\source\repos\Curso_C#\bin\Debug\net8.0\Curso_C#.pdb
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.AssemblyInfoInputs.cache
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.AssemblyInfo.cs
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.csproj.CoreCompileInputs.cache
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.dll
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\refint\Curso_C#.dll
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.pdb
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\Curso_C#.genruntimeconfig.cache
+C:\Users\Aluno Noite\source\repos\Curso_C#\obj\Debug\net8.0\ref\Curso_C#.dll
