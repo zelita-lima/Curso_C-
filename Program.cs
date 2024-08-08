@@ -1,5 +1,11 @@
 ﻿using Curso_C_;
 
+
+//_010_Estrutura_Repeticao.DemonstracaoDeEstruturaRepeticao();
+//_008_Conversao.DemonstracaoDeConversoes();
+
+//_006_Operadores_Comparacao.DemonstrandoOperadores();
+
 //bool resultado;
 //resultado  = _003_Operadores_Logicos.ELogico(false, true);
 //Console.WriteLine($"o resultado do operador logico e{resultado}");

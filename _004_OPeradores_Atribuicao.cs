@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Curso_C_
 {
-    public static class OPeradores_Atribuicao
+    public static class _004_OPeradores_Atribuicao
     {
+        // Método para demonstrar o operador de atribuição simples (=)
         public static void AtribuicaoSimples()
         {
            int a = 10;
             Console.WriteLine($"Valor de a apos atribuição;{a}");
         }
 
+        // Método para demonstrar o operador de atribuição composto com adição (+=)
         public static void AtribuicaoSoma()
         {
             int a = 10;
@@ -21,6 +23,7 @@ namespace Curso_C_
             Console.WriteLine($"Valor de a apos atribuição;{a}");
         }
 
+        // Método para demonstrar o operador de atribuição composto com subtração (-=)
         public static void AtribuicaoSUbtracao()
         {
             int a = 10;
@@ -28,6 +31,7 @@ namespace Curso_C_
             Console.WriteLine($"Valor de a apos atribuição;{a}");
         }
 
+        // Método para demonstrar o operador de atribuição composto com multiplicação (*=)
         public static void AtribuicaoMultiplicacao()
         {
             int a = 10;
@@ -35,6 +39,7 @@ namespace Curso_C_
             Console.WriteLine($"Valor de a apos atribuição;{a}");
         }
 
+        // Método para demonstrar o operador de atribuição composto com divisão (/=)
         public static void AtribuicaoDivisao()
         {
             int a = 10;
@@ -42,6 +47,7 @@ namespace Curso_C_
             Console.WriteLine($"Valor de a apos atribuição;{a}");
         }
 
+        // Método para demonstrar o operador de atribuição composto com módulo (%=)
         public static void AtribuicaoModulos()
         {
             int a = 10;

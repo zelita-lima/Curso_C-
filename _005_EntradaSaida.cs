@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Curso_C
 {
-    public static class EntradaSaida
+    public static class _005_EntradaSaida
     {
         public static void LerArmazenar()
         {
