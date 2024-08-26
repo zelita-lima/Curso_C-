@@ -3,7 +3,7 @@ using System;
 namespace CursoCSharp
 {
     // Classe que explica os conceitos básicos de Orientação a Objetos
-    public class ParadigmasOO
+    public class Paradigma
     {
         // Método que explica o que é Orientação a Objetos
         public void ExplicarOrientacaoAObjetos()

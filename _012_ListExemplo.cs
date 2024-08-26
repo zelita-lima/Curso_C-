@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CursoCSharp
 {
-    public class ListaExemplo
+    public class ListExemplo
     {
         public static void DemonstrarLista()
         {

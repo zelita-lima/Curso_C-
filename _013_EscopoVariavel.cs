@@ -2,7 +2,7 @@ using System;
 
 namespace CursoCSharp{
 
-    public class Escopo_Variavel
+    public class EscopoVariavel
     {
         // Escopo Global: Variável acessível por todos os métodos desta classe.
         private int contadorGlobal = 0;
