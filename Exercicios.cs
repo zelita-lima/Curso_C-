@@ -1,6 +1,7 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
-public class ExerciciosPF
+/*public class ExerciciosPF
 {
     public static void Main(string[] args)
     {
@@ -594,3 +595,151 @@ public class ExcecaoExemplo
     }
 }
 
+namespace Curso_C_
+{
+    public class Carro
+    {
+        public string Marca;
+        public string Modelo;
+        public int Ano;
+
+        // Construtor da classe Carro
+        public Carro(string marca, string modelo, int ano)
+        {
+            this.Marca = marca;
+            this.Modelo = modelo;
+            this.Ano = ano;
+        }
+
+        public void ExibirDetalhes()
+        {
+            Console.WriteLine($"A marca do carro é {Marca}, o modelo é {Modelo} e o ano é {Ano}.");
+        }
+    }
+}
+
+namespace Curso_C_
+{
+    public class Pessoa
+    {
+        public string Nome;
+        public int Idade;
+        public string Cidade;
+
+        public void ExibirInformacoes()
+        {
+            Console.WriteLine($"O nome da pessoa e {Nome}  a idade da pessoa e {Idade} e a cidade da pessoa e {Cidade}");
+        }
+    }
+}
+
+namespace Curso_C_
+{
+    public class Exercicio
+    {
+        public string Nome = "zelita";
+    ´   public int Idade = 18;
+
+
+        public void Exebir()
+        {
+            Console.WriteLine($"O nome {Nome} e a idade e{Idade} ");
+        }
+
+        pubpublic int soma(int n1, int)
+        {
+            return n1 + n2;
+        }
+    }
+}
+*/
+
+namespace Curso_C_
+{
+    public class Exercicio
+    {
+       /*public bool MostrarBolean()
+        {
+            bool estaChovendo = false;
+            if (estaChovendo == true)
+            {
+                retun true;
+            }
+            else
+            {
+                retun false;
+            }*/
+        /*public bool verificarMaiorIdade(int idade)
+        {
+            if (iddade >= 18)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        }
+        public void ExebirAltura()
+        {
+           double Altura = 1.51;
+           Console.WriteLine($"a altura e de {Altura:F2}");
+
+        }
+        public double CalcularArea(double raio)
+        {
+            return (raio * raio) * 3,14;
+        }
+        public double CalcularArea(double l. double b)
+        {
+            return l * b;
+        }
+      public void ExebirChar()
+        {
+            char letra = 'a';
+            Console.WriteLine($"O caracter o{letra}");
+        }
+    }
+    /*public class Calculadora
+    {
+        public double Multiplicar( double n1, doubl n2)
+        {
+            return n1 * n2;
+        }
+        public double Multiplicar(double n3, doubl n4, doubl n5)
+        {
+            return n3 * n4 * n5;
+        }
+      }*/
+        public class FluxoLoop
+        {
+            public double Exebir()
+            {
+                for(int i = 1, i<=10, i++)
+                {
+                    Console.WriteLine($"{i++}");
+                }
+                PublicKey void ExibirLoopWhile()
+                {
+                    int contador = 10
+                        while (contador >= 1)
+                    {
+                        Console.WriteLine($"{contador}");
+                        contador--;
+                    }
+                }
+                Public void ImprimeirPares(int n)
+                {
+                  int contador >= ;
+                    while(contador <= n)
+                    {
+                        if (contador & 2 == 0)
+                        {
+                            Console.WriteLine(contador);
+                        }
+                    }
+                }
+            }
+        }
+}
