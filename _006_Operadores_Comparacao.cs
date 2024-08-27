@@ -14,27 +14,27 @@ namespace Curso_C_
             int b = 20;
 
             //igaul a (==)
-            bool igual = (a == b));
+            bool igual = (a == b);
             Console.WriteLine($" a == b:{igual}");
 
             //Diferente a (!=)
-            bool Diferente = (a != b));
+            bool Diferente = (a != b);
             Console.WriteLine($" a != b:{Diferente}");
 
             //Maior a (>)
-            bool Maior = (a > b));
+            bool Maior = (a > b);
             Console.WriteLine($" a > b:{Maior}");
 
             //Menor a (<)
-            bool Menor = (a < b));
+            bool Menor = (a < b);
             Console.WriteLine($" a < b:{Menor}");
 
             //MaiorIgual a (>=)
-            bool MaiorIgual = (a >= b));
+            bool MaiorIgual = (a >= b);
             Console.WriteLine($" a >= b:{MaiorIgual}");
 
             //MenorIgual a (<=)
-            bool MenorIgual = (a <= b));
+            bool MenorIgual = (a <= b);
             Console.WriteLine($" a <= b:{MenorIgual}");
 
 

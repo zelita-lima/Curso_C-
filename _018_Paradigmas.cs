@@ -53,7 +53,7 @@ namespace CursoCSharp
         // Método principal para executar as explicações
         public static void Main(string[] args)
         {
-            ParadigmasOO conceitos = new ParadigmasOO();
+            Paradigma conceitos = new Paradigma();
 
             // Explicar Orientação a Objetos
             conceitos.ExplicarOrientacaoAObjetos();

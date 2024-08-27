@@ -10,38 +10,38 @@ namespace Curso_C_
     { 
         public static void Soma()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"A Soma e;{n1 + n2}");
 
         }
         public static void Subtração()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"A Subtração e;{n1 - n2}");
         }
         public static void Divisão()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"A Divisão  e;{n1 / n2}");
         }
         public static void Multiplicação()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"A Multiplicação e;{n1 * n2}");
         }
         public static void Resto()
         {
-            init n1 = 11, n2 = 2;
+            int n1 = 11, n2 = 2;
             Console.WriteLine($"O Resto e;{n1 % n2}");
         }
         public static void Incremento()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"O Incremento e;{n1++}");
         }
         public static void Decremento()
         {
-            init n1 = 1, n2 = 2;
+            int n1 = 1, n2 = 2;
             Console.WriteLine($"O Decremento e;{n1--}");
         }
     }

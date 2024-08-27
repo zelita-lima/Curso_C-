@@ -114,9 +114,21 @@ Console.WriteLine($"O valor da multiplicação com tres paramerametros{receberCa
 //______________________________________________________________________________________________________________________________________________-//
 //Exercicio.ExebirChar();
 //______________________________________________________________________________________________________________________________________________-//
-Exercicio.exebirChar();
+/*Exercicio.exebirChar();
 
 FluxoLoop fl = new FluxoLoop();
 fl.ExibirLoop();
 fl.ExibirLoopWhile();
 fl.ImprimirPares(6);
+*/
+//______________________________________________________________________________________________________________________________________________-//
+//VarUsageExample example = new VarUsageExample();
+//example.DemonstrateVarUsage();
+
+//______________________________________________________________________________________________________________________________________________-//
+//var exemplo = new ExemploUsoDynamic();
+//exemplo.DemonstrarUsoDynamic();
+
+//______________________________________________________________________________________________________________________________________________-//
+var exemplo = new ExemploUsoLINQ();
+exemplo.DemonstrarUsoLINQ();

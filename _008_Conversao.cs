@@ -35,8 +35,8 @@ namespace Curso_C_
             Console.WriteLine($"Unboxing de object para int: {numUnboxed}");
 
             int numero = 42;
-            string numeroString = numero.ToString();  // Conversão de int para string usando ToString
-            Console.WriteLine($"Conversão de int para string: {numeroString}");
+            string numeroString1 = numero.ToString();  // Conversão de int para string usando ToString
+            Console.WriteLine($"Conversão de int para string: {numeroString1}");
         }
     }
 }

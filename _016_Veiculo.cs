@@ -20,7 +20,7 @@ namespace CursoCSharp
 
          public void ExibirDetalhes()
         {
-            Console.WriteLine($"O nome do livro é: {this.marca}, o autor do livro é: {this.modelo}, o ano de publicaçaõ: {this.ano}, a quantidade de páginas é: {this.velocimetesro}");
+            Console.WriteLine($"O nome do livro é: {marca}, o autor do livro é: {modelo}, o ano de publicaçaõ: {ano}, a quantidade de páginas é: {velocimetero}");
         } 
     }
  }
