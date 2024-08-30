@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\exercicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:exercicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Exercicios.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Exercicios.cs",
-              "RelativeDocumentMoniker": "Exercicios.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Exercicios.cs",
-              "RelativeToolTip": "Exercicios.cs",
-              "ViewState": "AQIAABcBAAAAAAAAAAAswCQBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T20:01:18.857Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +32,35 @@
               "RelativeDocumentMoniker": "_022_Linq.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\_022_Linq.cs",
               "RelativeToolTip": "_022_Linq.cs",
-              "ViewState": "AQIAAJsAAAAAAAAAAAAAwMwAAAAAAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAvwFcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T16:59:03.575Z",
+              "WhenOpened": "2024-08-30T17:35:08.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAvwI4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T17:12:30.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Exercicios.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Exercicios.cs",
+              "RelativeDocumentMoniker": "Exercicios.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Exercicios.cs",
+              "RelativeToolTip": "Exercicios.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T20:01:18.857Z",
               "EditorCaption": ""
             }
           ]

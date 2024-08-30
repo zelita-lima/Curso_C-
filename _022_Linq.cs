@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+/*
 namespace Curso_C_
 {
     public class Produto
@@ -85,7 +85,7 @@ class Program
 }
 }
 
-            Encontrar todos os nomes das pessoas que têm o nome começando com a letra 'A' e que têm mais de 25 anos.
+            //Encontrar todos os nomes das pessoas que têm o nome começando com a letra 'A' e que têm mais de 25 anos.
         
              var result1 = people
             .Where(p => p.Name.StartsWith("A") && p.Age > 25)
@@ -202,3 +202,4 @@ class Program
         public int Idade { get; set; }
     }
 }
+*/

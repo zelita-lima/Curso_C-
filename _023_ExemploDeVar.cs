@@ -1,7 +1,8 @@
 ﻿using System;
 
 namespace Curso_C_
-{
+{ }
+    /*
     internal class _023_ExemploDeVar
     {
         //Exercícios Teóricos
@@ -57,7 +58,7 @@ namespace Curso_C_
         //Declaração de Variáveis com var:
         // Exercício: Declare uma variável de cada um dos seguintes tipos usando var atribua a elas valores apropriados.Depois, exiba o tipo da variável usando
         //GetType() para confirmar a inferência do tipo.
-
+        /*s
         var integer = 10;
         var floatingPoint = 10.5;
         var text = "Hello, World!";
@@ -136,3 +137,4 @@ namespace Curso_C_
         Console.WriteLine($"Name: {person.Name}, Age: {person.Age}");
     }
 }
+*/

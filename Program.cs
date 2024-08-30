@@ -130,5 +130,13 @@ fl.ImprimirPares(6);
 //exemplo.DemonstrarUsoDynamic();
 
 //______________________________________________________________________________________________________________________________________________-//
-var exemplo = new ExemploUsoLINQ();
-exemplo.DemonstrarUsoLINQ();
+//var exemplo = new ExemploUsoLINQ();
+//exemplo.DemonstrarUsoLINQ();
+//______________________________________________________________________________________________________________________________________________-//
+//var Pessoa = new Exercicio();
+//Pessoa.Seila();
+
+    // Criar uma instância da classe Exercicio e chamar o método Seila
+    var Exercicio = new Exercicio();
+    exercicio.Seila();
+
