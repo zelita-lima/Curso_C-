@@ -23,7 +23,7 @@ namespace Curso_C_
                  new Livro { NomeLivro = "Love", Anolivro = 2023 }
             };
 
-            var ReceberLivros = pessoasList.Where(p => p.Anolivro >  2000) OrderBy(x => x.Anolivro).ToList();
+            var ReceberLivros = pessoasList.Where(p => p.Anolivro > 2000) OrderBy(x => x.Anolivro).ToList();
 
             foreach(var livro in LivrosList)
             {

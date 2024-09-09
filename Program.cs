@@ -1,4 +1,6 @@
 ﻿using Curso_C_;
+using static Curso_C_._026_NulLabel;
+using static Curso_C_._027_Struct;
 
 
 //_010_Estrutura_Repeticao.DemonstracaoDeEstruturaRepeticao();
@@ -136,7 +138,30 @@ fl.ImprimirPares(6);
 //var Pessoa = new Exercicio();
 //Pessoa.Seila();
 
-    // Criar uma instância da classe Exercicio e chamar o método Seila
-    var Exercicio = new Exercicio();
-    exercicio.Seila();
+// Criar uma instância da classe Exercicio e chamar o método Seila
+// var Exercicio = new Exercicio();
+//exercicio.Seila();
+//______________________________________________________________________________________________________________________________________________-//
+//var str = new Ponto();
+//str.Ponto();
+//______________________________________________________________________________________________________________________________________________-//
 
+// Criando uma instância da struct Ponto
+//Ponto ponto1 = new Ponto(3, 4);
+//Ponto ponto2 = new Ponto(6, 8);
+
+// Exibindo os detalhes dos pontos
+//ponto1.ExibirDetalhes();
+//ponto2.ExibirDetalhes();
+
+// Calculando e exibindo a distância entre dois pontos
+//double distancia = ponto1.CalcularDistancia(ponto2);
+//Console.WriteLine($"Distância entre os pontos: {distancia}");
+//______________________________________________________________________________________________________________________________________________-//
+//var nulo = new NullableTypesDemo();
+//nulo.ExibirValores();
+//nulo.ExplicarConceitos();
+//______________________________________________________________________________________________________________________________________________-//
+//var stru = new ExplicacaoStructs();
+//stru.DemonstrarDiferenca();
+//______________________________________________________________________________________________________________________________________________-//

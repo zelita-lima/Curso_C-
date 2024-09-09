@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\bin\\Release",
   "PreviewInSolutionExplorer": false
 }
