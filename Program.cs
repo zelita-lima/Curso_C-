@@ -1,7 +1,4 @@
-﻿using Curso_C_;
-using static Curso_C_._026_NulLabel;
-using static Curso_C_._027_Struct;
-
+﻿
 
 //_010_Estrutura_Repeticao.DemonstracaoDeEstruturaRepeticao();
 //_008_Conversao.DemonstracaoDeConversoes();
@@ -165,3 +162,321 @@ fl.ImprimirPares(6);
 //var stru = new ExplicacaoStructs();
 //stru.DemonstrarDiferenca();
 //______________________________________________________________________________________________________________________________________________-//
+using Curso_C_;
+using System;
+using System.Collections.Generic;
+
+namespace BibliotecaVeiculos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Inicialização de objetos
+            Biblioteca biblioteca = new Biblioteca();
+            Garagem garagem = new Garagem();
+            Usuario usuario = new Usuario("João Silva", "12345678900");
+            Cliente cliente = new Cliente("Maria Oliveira", "98765432100");
+
+            // Loop do menu principal
+            int opcao = 0;
+            do
+            {
+                Console.Clear(); // Limpa a tela para uma melhor organização visual
+                Console.WriteLine("==============================================");
+                Console.WriteLine("==========   SISTEMA DE GERENCIAMENTO   ======");
+                Console.WriteLine("==============================================\n");
+                Console.WriteLine("1. Biblioteca de Livros");
+                Console.WriteLine("2. Sistema de Gerenciamento de Veículos");
+                Console.WriteLine("0. Sair");
+                Console.WriteLine("==============================================");
+                Console.Write("Escolha uma opção: ");
+
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.");
+                    continue;
+                }
+
+                switch (opcao)
+                {
+                    case 1:
+                        MenuBiblioteca(biblioteca, usuario);
+                        break;
+                    case 2:
+                        MenuVeiculos(garagem, cliente);
+                        break;
+                    case 0:
+                        Console.WriteLine("\nSaindo do programa...");
+                        break;
+                    default:
+                        Console.WriteLine("\nOpção inválida, tente novamente.");
+                        break;
+                }
+            } while (opcao != 0);
+        }
+
+        static void MenuBiblioteca(Biblioteca biblioteca, Usuario usuario)
+        {
+            int opcao = 0;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("==============================================");
+                Console.WriteLine("==========   BIBLIOTECA DE LIVROS   ==========");
+                Console.WriteLine("==============================================\n");
+                Console.WriteLine("1. Adicionar Livro");
+                Console.WriteLine("2. Listar Livros");
+                Console.WriteLine("3. Emprestar Livro");
+                Console.WriteLine("4. Devolver Livro");
+                Console.WriteLine("5. Exibir Livros Emprestados");
+                Console.WriteLine("0. Voltar");
+                Console.WriteLine("==============================================");
+                Console.Write("Escolha uma opção: ");
+
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.");
+                    continue;
+                }
+
+                switch (opcao)
+                {
+                    case 1:
+                        AdicionarLivro(biblioteca);
+                        break;
+                    case 2:
+                        biblioteca.ListarLivros();
+                        break;
+                    case 3:
+                        EmprestarLivro(biblioteca, usuario);
+                        break;
+                    case 4:
+                        DevolverLivro(biblioteca, usuario);
+                        break;
+                    case 5:
+                        usuario.ExibirLivrosEmprestados();
+                        break;
+                    case 0:
+                        Console.WriteLine("\nVoltando ao menu principal...");
+                        break;
+                    default:
+                        Console.WriteLine("\nOpção inválida, tente novamente.");
+                        break;
+                }
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey(); // Pausa para permitir que o usuário veja a mensagem antes de continuar
+            } while (opcao != 0);
+        }
+
+        static void MenuVeiculos(Garagem garagem, Cliente cliente)
+        {
+            int opcao = 0;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("==============================================");
+                Console.WriteLine("=======   SISTEMA DE VEÍCULOS - GARAGEM   =====");
+                Console.WriteLine("==============================================\n");
+                Console.WriteLine("1. Adicionar Veículo");
+                Console.WriteLine("2. Listar Veículos");
+                Console.WriteLine("3. Comprar Veículo");
+                Console.WriteLine("4. Vender Veículo");
+                Console.WriteLine("5. Exibir Veículos Comprados");
+                Console.WriteLine("0. Voltar");
+                Console.WriteLine("==============================================");
+                Console.Write("Escolha uma opção: ");
+
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.");
+                    continue;
+                }
+
+                switch (opcao)
+                {
+                    case 1:
+                        AdicionarVeiculo(garagem);
+                        break;
+                    case 2:
+                        ListarVeiculos(garagem);
+                        break;
+                    case 3:
+                        ComprarVeiculo(garagem, cliente);
+                        break;
+                    case 4:
+                        VenderVeiculo(garagem);
+                        break;
+                    case 5:
+                        cliente.ExibirVeiculosComprados();
+                        break;
+                    case 0:
+                        Console.WriteLine("\nVoltando ao menu principal...");
+                        break;
+                    default:
+                        Console.WriteLine("\nOpção inválida, tente novamente.");
+                        break;
+                }
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey(); // Pausa para permitir que o usuário veja a mensagem antes de continuar
+            } while (opcao != 0);
+        }
+
+        static void AdicionarLivro(Biblioteca biblioteca)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("=========   ADICIONAR NOVO LIVRO   ==========");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite o título do livro: ");
+            string titulo = Console.ReadLine();
+            Console.Write("Digite o autor do livro: ");
+            string autor = Console.ReadLine();
+            Console.Write("Digite o ano de publicação: ");
+            if (!int.TryParse(Console.ReadLine(), out int ano))
+            {
+                Console.WriteLine("\nAno inválido.");
+                return;
+            }
+            Console.Write("Digite o número de páginas: ");
+            if (!int.TryParse(Console.ReadLine(), out int paginas))
+            {
+                Console.WriteLine("\nNúmero de páginas inválido.");
+                return;
+            }
+
+            Livro livro = new Livro(titulo, autor, ano, paginas);
+            biblioteca.AdicionarLivro(livro);
+            Console.WriteLine("\nLivro adicionado com sucesso!");
+        }
+
+        static void EmprestarLivro(Biblioteca biblioteca, Usuario usuario)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("==========   EMPRÉSTIMO DE LIVRO   ==========");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite o título do livro a ser emprestado: ");
+            string titulo = Console.ReadLine();
+            Livro livro = biblioteca.BuscarLivroPorTitulo(titulo);
+            if (livro != null)
+            {
+                usuario.EmprestarLivro(livro, biblioteca);
+                Console.WriteLine("\nLivro emprestado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("\nLivro não encontrado no acervo.");
+            }
+        }
+
+        static void DevolverLivro(Biblioteca biblioteca, Usuario usuario)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("===========   DEVOLUÇÃO DE LIVRO   ===========");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite o título do livro a ser devolvido: ");
+            string titulo = Console.ReadLine();
+            Livro livro = biblioteca.BuscarLivroPorTitulo(titulo);
+            if (livro != null)
+            {
+                usuario.DevolverLivro(livro, biblioteca);
+                Console.WriteLine("\nLivro devolvido com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("\nLivro não encontrado na lista de empréstimos.");
+            }
+        }
+
+        static void AdicionarVeiculo(Garagem garagem)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("=========   ADICIONAR NOVO VEÍCULO   =========");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite a marca do veículo: ");
+            string marca = Console.ReadLine();
+            Console.Write("Digite o modelo do veículo: ");
+            string modelo = Console.ReadLine();
+            Console.Write("Digite o ano do veículo: ");
+            if (!int.TryParse(Console.ReadLine(), out int ano))
+            {
+                Console.WriteLine("\nAno inválido.");
+                return;
+            }
+            Console.Write("Digite a quilometragem do veículo: ");
+            if (!int.TryParse(Console.ReadLine(), out int quilometragem))
+            {
+                Console.WriteLine("\nQuilometragem inválida.");
+                return;
+            }
+
+            Veiculo veiculo = new Veiculo(marca, modelo, ano, quilometragem);
+            garagem.AdicionarVeiculo(veiculo);
+            Console.WriteLine("\nVeículo adicionado com sucesso!");
+        }
+
+        static void ListarVeiculos(Garagem garagem)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======   LISTA DE VEÍCULOS DISPONÍVEIS   =====");
+            Console.WriteLine("==============================================");
+            var veiculos = garagem.ListarTodosVeiculos(); // Obtém todos os veículos da garagem
+
+            if (veiculos.Count == 0)
+            {
+                Console.WriteLine("\nNenhum veículo disponível.");
+            }
+            else
+            {
+                foreach (var veiculo in veiculos) // Itera sobre a lista de veículos
+                {
+                    veiculo.ExibirDetalhes(); // Exibe os detalhes de cada veículo
+                }
+            }
+        }
+
+        static void ComprarVeiculo(Garagem garagem, Cliente cliente)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("=========   COMPRA DE VEÍCULO   =============");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite o modelo do veículo a ser comprado: ");
+            string modelo = Console.ReadLine();
+            Veiculo veiculo = garagem.BuscarVeiculoPorModelo(modelo);
+            if (veiculo != null)
+            {
+                cliente.ComprarVeiculo(veiculo, garagem);
+                Console.WriteLine("\nVeículo comprado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("\nVeículo não encontrado.");
+            }
+        }
+
+        static void VenderVeiculo(Garagem garagem)
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("==========   VENDA DE VEÍCULO   =============");
+            Console.WriteLine("==============================================");
+            Console.Write("Digite o modelo do veículo a ser vendido: ");
+            string modelo = Console.ReadLine();
+            Veiculo veiculo = garagem.BuscarVeiculoPorModelo(modelo);
+            if (veiculo != null)
+            {
+                garagem.VenderVeiculo(veiculo);
+                Console.WriteLine("\nVeículo vendido com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("\nVeículo não encontrado.");
+            }
+        }
+    }
+}

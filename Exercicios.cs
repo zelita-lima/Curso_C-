@@ -2,7 +2,7 @@ using CursoCSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+/*
 namespace Curso_C_
 {
 
@@ -31,7 +31,7 @@ namespace Curso_C_
             }
         }
     }
-}
+}*/
 /*
 public class Pessoa
 {

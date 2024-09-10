@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Curso_C_;
+using System;
 
 namespace Curso_C_
 {
+
     // Classe Veiculo
     public class Veiculo
     {
@@ -143,4 +141,6 @@ namespace Curso_C_
             }
         }
     }
+
 }
+

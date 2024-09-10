@@ -48,21 +48,7 @@ namespace CursoCSharp
             Console.WriteLine("Polimorfismo permite que métodos com o mesmo nome se comportem de forma diferente, dependendo do contexto.");
             Console.WriteLine("Isso pode ser alcançado através de sobrecarga de métodos e sobrescrita de métodos.");
             Console.WriteLine();
-        }
-
-        // Método principal para executar as explicações
-        public static void Main(string[] args)
-        {
-            Paradigma conceitos = new Paradigma();
-
-            // Explicar Orientação a Objetos
-            conceitos.ExplicarOrientacaoAObjetos();
-
-            // Explicar a diferença entre Programação Estruturada e Orientada a Objetos
-            conceitos.DiferencaEntreParadigmas();
-
-            // Explicar os Pilares da Orientação a Objetos
-            conceitos.ExplicarPilares();
-        }
+        }        
+        
     }
 }
