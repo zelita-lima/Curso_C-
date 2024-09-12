@@ -162,7 +162,7 @@ fl.ImprimirPares(6);
 //var stru = new ExplicacaoStructs();
 //stru.DemonstrarDiferenca();
 //______________________________________________________________________________________________________________________________________________-//
-using Curso_C_;
+/*sing Curso_C_;
 using System;
 using System.Collections.Generic;
 
@@ -480,3 +480,38 @@ namespace BibliotecaVeiculos
         }
     }
 }
+*/
+//______________________________________________________________________________________________________________________________________________-//
+/*using static Curso_C_.Paradigmas00._003_ClasseAbstrata;//pai vai salvar o nome do filho //to metodo de uma interface e abstrato 
+
+AnimalAbs cachorro = new CachorroAbs("Billy");//classe abstrata e obrigada a botar uma abstração mas filho que tem que responder 
+AnimalAbs gato = new GatoAbs("GATO");//na clase abstrata ela pode ter metodos abstratos e metodos comuns
+
+// Exibindo informações e fazendo som dos animais
+cachorro.ExibirInformacoes();
+cachorro.FazerSom();
+
+gato.ExibirInformacoes();
+gato.FazerSom();
+
+// Explicando o conceito de classe abstrata
+cachorro.ExplicarClasseAbstrata();*/
+//______________________________________________________________________________________________________________________________________________-//
+// Criando instâncias de classes que implementam a interface
+/*using static Curso_C_.Paradigmas00._002_Interface;
+
+IAnimal cachorro = new CachorroInter("Wall-e");//aqui os filhos que alimentam o pai e da dados para o pai
+IAnimal gato = new GatoInter("GATO");
+
+// Exibindo informações e sons dos animais
+cachorro.ExibirInformacoes();
+cachorro.FazerSom();
+
+gato.ExibirInformacoes();
+gato.FazerSom();
+
+// Explicando o conceito de interface
+ExplicadorDeInterface explicador = new ExplicadorDeInterface();
+explicador.ExplicarInterface();
+*/
+//______________________________________________________________________________________________________________________________________________-//
