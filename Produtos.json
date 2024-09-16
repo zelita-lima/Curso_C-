@@ -1,0 +1,14 @@
+ [
+    "Produtos",
+    
+    {
+      "Nome": "Pão Francês",
+      "Preco": 0.50,
+      "QuantidadeEstoque": 100
+    },
+    {
+      "Nome": "Croissant",
+      "Preco": 2.00,
+      "QuantidadeEstoque": 50
+    }
+  ]

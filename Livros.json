@@ -1,0 +1,24 @@
+{
+  "Usuarios": [],
+  "Livros": [
+    {
+      "Titulo": "Coraline",
+      "Autor": "ns",
+      "Ano": 2005,
+      "Paginas": 99988
+    },
+    {
+      "Titulo": "tell me lies",
+      "Autor": "nao sei",
+      "Ano": 2010,
+      "Paginas": 30000
+    },
+    {
+      "Titulo": "pequeno principe",
+      "Autor": "nss",
+      "Ano": 2006,
+      "Paginas": 200
+    }
+  ],
+  "Emprestimos": []
+}

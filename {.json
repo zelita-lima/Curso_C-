@@ -1,0 +1,21 @@
+ [
+  "Vendas",
+  
+  {
+    "Data": "2024-09-16",
+    "ClienteCpf": "12345678900",
+    "Itens": [
+      {
+        "NomeProduto": "Pão Francês",
+        "Quantidade": 3,
+        "PrecoUnitario": 0.50
+      },
+      {
+        "NomeProduto": "Croissant",
+        "Quantidade": 2,
+        "PrecoUnitario": 2.00
+      }
+    ],
+    "Total": 6.00
+  }
+] 

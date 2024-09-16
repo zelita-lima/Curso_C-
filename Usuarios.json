@@ -1,0 +1,16 @@
+{
+  "Usuarios": [
+    {
+      "Nome": "Lia Costa",
+      "Cpf": "232323232323",
+      "LivrosEmprestados": []
+    },
+    {
+      "Nome": "Zelita Lima Silva",
+      "Cpf": "00000000000000",
+      "LivrosEmprestados": []
+    }
+  ],
+  "Livros": [],
+  "Emprestimos": []
+}

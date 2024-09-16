@@ -3,137 +3,115 @@ using System.Collections.Generic;
 
 namespace Curso_C_
 {
-    // Classe Livro
-    public class Livro
-    {
-        // Atributos privados
-        private string titulo;
-        private string autor;
-        private int anoPublicacao;
-        private int numeroPaginas;
-
-        // Propriedades públicas com encapsulamento
-        public string Titulo
+        // Classe Livro
+        public class Livro
         {
-            get { return titulo; }
-            set { titulo = value; }
+            public string Titulo { get; set; }
+            public string Autor { get; set; }
+            public int Ano { get; set; }
+            public int Paginas { get; set; }
+
+            public Livro() { } // Construtor padrão necessário para deserialização
+
+            public Livro(string titulo, string autor, int ano, int paginas)
+            {
+                Titulo = titulo;
+                Autor = autor;
+                Ano = ano;
+                Paginas = paginas;
+            }
+
+            public void ExibirDetalhes()
+            {
+                Console.WriteLine($"Título: {Titulo}, Autor: {Autor}, Ano: {Ano}, Páginas: {Paginas}");
+            }
         }
 
-        public string Autor
+        // Classe Biblioteca
+        public class Biblioteca
         {
-            get { return autor; }
-            set { autor = value; }
+            private List<Livro> acervo = new List<Livro>();
+
+            public void AdicionarLivro(Livro livro)
+            {
+                acervo.Add(livro);
+            }
+
+            public void RemoverLivro(Livro livro)
+            {
+                acervo.Remove(livro);
+            }
+
+            public Livro BuscarLivroPorTitulo(string titulo)
+            {
+                return acervo.FirstOrDefault(livro => livro.Titulo == titulo);
+            }
+
+            public List<Livro> ObterLivros()
+            {
+                return new List<Livro>(acervo);
+            }
         }
 
-        public int AnoPublicacao
+        // Classe Usuario
+        public class Usuario
         {
-            get { return anoPublicacao; }
-            set { anoPublicacao = value; }
+            public string Nome { get; set; }
+            public string Cpf { get; set; }
+            public List<Livro> LivrosEmprestados { get; set; } = new List<Livro>();
+
+            public Usuario() { } // Construtor padrão necessário para deserialização
+
+            public Usuario(string nome, string cpf)
+            {
+                Nome = nome;
+                Cpf = cpf;
+            }
+
+            public void EmprestarLivro(Livro livro, Biblioteca biblioteca)
+            {
+                Livro livroEmprestado = biblioteca.BuscarLivroPorTitulo(livro.Titulo);
+                if (livroEmprestado != null)
+                {
+                    LivrosEmprestados.Add(livroEmprestado);
+                    biblioteca.RemoverLivro(livroEmprestado);
+                    Console.WriteLine($"{Nome} emprestou o livro '{livro.Titulo}'.");
+                }
+            }
+
+            public void DevolverLivro(Livro livro, Biblioteca biblioteca)
+            {
+                if (LivrosEmprestados.Contains(livro))
+                {
+                    LivrosEmprestados.Remove(livro);
+                    biblioteca.AdicionarLivro(livro);
+                    Console.WriteLine($"{Nome} devolveu o livro '{livro.Titulo}'.");
+                }
+            }
+
+            public void ExibirLivrosEmprestados()
+            {
+                Console.WriteLine($"Livros emprestados por {Nome}:");
+                foreach (var livro in LivrosEmprestados)
+                {
+                    livro.ExibirDetalhes();
+                }
+            }
         }
 
-        public int NumeroPaginas
+        // Classe Emprestimo
+        public class Emprestimo
         {
-            get { return numeroPaginas; }
-            set { numeroPaginas = value; }
+            public string UsuarioCpf { get; set; }
+            public string LivroTitulo { get; set; }
+            public DateTime DataEmprestimo { get; set; }
         }
 
-        // Construtor
-        public Livro(string titulo, string autor, int anoPublicacao, int numeroPaginas)
+        // Classe Dados para deserialização
+        public class Dados
         {
-            this.titulo = titulo;
-            this.autor = autor;
-            this.anoPublicacao = anoPublicacao;
-            this.numeroPaginas = numeroPaginas;
-        }
-
-        // Método para exibir detalhes do livro
-        public void ExibirDetalhes()
-        {
-            Console.WriteLine($"Título: {Titulo}, Autor: {Autor}, Ano: {AnoPublicacao}, Páginas: {NumeroPaginas}");
+            public List<Usuario> Usuarios { get; set; }
+            public List<Livro> Livros { get; set; }
+            public List<Emprestimo> Emprestimos { get; set; }
         }
     }
-
-    // Classe Biblioteca
-    public class Biblioteca
-    {
-        // Lista privada de livros
-        private List<Livro> acervo = new List<Livro>();
-
-        // Método para adicionar um livro
-        public void AdicionarLivro(Livro livro)
-        {
-            acervo.Add(livro);
-        }
-
-        // Método para remover um livro
-        public void RemoverLivro(Livro livro)
-        {
-            acervo.Remove(livro);
-        }
-
-        // Método para buscar um livro por título
-        public Livro BuscarLivroPorTitulo(string titulo)
-        {
-            return acervo.Find(livro => livro.Titulo == titulo);
-        }
-
-        // Método para listar todos os livros
-        public void ListarLivros()
-        {
-            foreach (var livro in acervo)
-            {
-                livro.ExibirDetalhes();
-            }
-        }
-    }
-
-    // Classe Usuario
-    public class Usuario
-    {
-        // Atributos privados
-        private string nome;
-        private string cpf;
-        private List<Livro> livrosEmprestados = new List<Livro>();
-
-        // Construtor
-        public Usuario(string nome, string cpf)
-        {
-            this.nome = nome;
-            this.cpf = cpf;
-        }
-
-        // Método para emprestar um livro
-        public void EmprestarLivro(Livro livro, Biblioteca biblioteca)
-        {
-            Livro livroEmprestado = biblioteca.BuscarLivroPorTitulo(livro.Titulo);
-            if (livroEmprestado != null)
-            {
-                livrosEmprestados.Add(livroEmprestado);
-                biblioteca.RemoverLivro(livroEmprestado);
-                Console.WriteLine($"{nome} emprestou o livro '{livro.Titulo}'.");
-            }
-        }
-
-        // Método para devolver um livro
-        public void DevolverLivro(Livro livro, Biblioteca biblioteca)
-        {
-            if (livrosEmprestados.Contains(livro))
-            {
-                livrosEmprestados.Remove(livro);
-                biblioteca.AdicionarLivro(livro);
-                Console.WriteLine($"{nome} devolveu o livro '{livro.Titulo}'.");
-            }
-        }
-
-        // Método para exibir livros emprestados
-        public void ExibirLivrosEmprestados()
-        {
-            Console.WriteLine($"Livros emprestados por {nome}:");
-            foreach (var livro in livrosEmprestados)
-            {
-                livro.ExibirDetalhes();
-            }
-        }
-    }
-
-}
