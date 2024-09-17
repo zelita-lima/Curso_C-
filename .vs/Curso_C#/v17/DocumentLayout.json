@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\padaria_program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:padaria_program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\estoque.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:estoque.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\produtos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:produtos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\usuarios.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:usuarios.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\program_livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:program_livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,88 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Estoque.json",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Estoque.json",
-              "RelativeDocumentMoniker": "Estoque.json",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Estoque.json",
-              "RelativeToolTip": "Estoque.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAABqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-16T19:59:36.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Produtos.json",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Produtos.json",
-              "RelativeDocumentMoniker": "Produtos.json",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Produtos.json",
-              "RelativeToolTip": "Produtos.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-16T19:39:28.479Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usuarios.json",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Usuarios.json",
-              "RelativeDocumentMoniker": "Usuarios.json",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Usuarios.json",
-              "RelativeToolTip": "Usuarios.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-16T19:56:47.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program_Livro.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program_Livro.cs",
-              "RelativeDocumentMoniker": "Program_Livro.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program_Livro.cs",
-              "RelativeToolTip": "Program_Livro.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAswHUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:55:08.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Padaria_Program.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Padaria_Program.cs",
-              "RelativeDocumentMoniker": "Padaria_Program.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Padaria_Program.cs",
-              "RelativeToolTip": "Padaria_Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:35:20.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAPoDAAAAAAAAAAAQwLMFAAAAAAAA",
+              "ViewState": "AQIAAK4CAAAAAAAAAAAIwN8CAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T19:40:06.603Z",
+              "WhenOpened": "2024-09-17T17:56:13.803Z",
               "EditorCaption": ""
             }
           ]

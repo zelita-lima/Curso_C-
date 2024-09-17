@@ -1,1 +1,1 @@
-[]
+[{"Id":1,"Cliente":{"Id":1,"Nome":"Jo\u00E3o Silva"},"Produto":{"Id":1,"Nome":"P\u00E3o Franc\u00EAs","Preco":0.50,"Quantidade":100},"Quantidade":5,"Data":"2023-09-15T08:30:00"},{"Id":2,"Cliente":{"Id":2,"Nome":"Maria Oliveira"},"Produto":{"Id":3,"Nome":"Coxinha","Preco":3.50,"Quantidade":50},"Quantidade":3,"Data":"2023-09-16T10:15:00"},{"Id":3,"Cliente":{"Id":3,"Nome":"Carlos Pereira"},"Produto":{"Id":2,"Nome":"Bolo de Cenoura","Preco":20.00,"Quantidade":10},"Quantidade":1,"Data":"2023-09-16T14:00:00"}]
