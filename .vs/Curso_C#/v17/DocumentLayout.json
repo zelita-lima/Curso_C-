@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|c:\\users\\aluno noite\\desktop\\curso_c-\\estoque.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{862352E7-8678-4937-A172-1117706319D2}|Curso_C#.csproj|solutionrelative:estoque.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,9 +32,22 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAK4CAAAAAAAAAAAIwN8CAAABAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAgwEsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T17:56:13.803Z",
+              "WhenOpened": "2024-09-18T16:57:07.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Estoque.json",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Estoque.json",
+              "RelativeDocumentMoniker": "Estoque.json",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Desktop\\Curso_C-\\Estoque.json",
+              "RelativeToolTip": "Estoque.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-18T11:23:57.494Z",
               "EditorCaption": ""
             }
           ]

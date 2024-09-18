@@ -23,18 +23,23 @@ namespace SistemaGerenciamentoPadaria
             do
             {
                 Console.Clear();
-                Console.WriteLine("==============================================");
-                Console.WriteLine("=========  SISTEMA DE GERENCIAMENTO  =========");
-                Console.WriteLine("===============   PADARIA   ==================");
-                Console.WriteLine("==============================================\n");
-                Console.WriteLine("1. Gerenciar Produtos");
-                Console.WriteLine("2. Gerenciar Clientes");
-                Console.WriteLine("3. Gerenciar Vendas");
-                Console.WriteLine("4. Gerenciar Estoque");
-                Console.WriteLine("0. Sair");
-                Console.WriteLine($"Autor: Zelita Lima");
-                Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-                Console.WriteLine("==============================================\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                 SITEMA DE GENCIAMENTO                 ║");
+                Console.WriteLine("║                       DE PADARIA                      ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("║1. Gerenciar Produtos                                  ║");
+                Console.WriteLine("║2. Gerenciar Clientes                                  ║");
+                Console.WriteLine("║3. Gerenciar Vendas                                    ║");
+                Console.WriteLine("║4. Gerenciar Estoque                                   ║");
+                Console.WriteLine("║5. Gerar Relatorio                                     ║");
+                Console.WriteLine("║0. Sair                                                ║");
+                Console.WriteLine($"║Autor: Zelita Lima                                     ║");
+                Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -52,6 +57,9 @@ namespace SistemaGerenciamentoPadaria
                     case 4:
                         GerenciarEstoque();
                         break;
+                    case 5:
+                        GerarRelatorio();
+                        break;
                     case 0:
                         SalvarDados();
                         Console.WriteLine("\nSaindo do programa...");
@@ -63,6 +71,51 @@ namespace SistemaGerenciamentoPadaria
             } while (opcao != 0);
         }
 
+
+        static void GerarRelatorio()
+        {
+            int opcao;
+            do
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                                              RELATÓRIO GERAL                                           ║");
+                Console.WriteLine("║                                                DA PADARIA                                              ║");
+                Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                                                                           ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔════════╦═════════════════════╦════════════╦═════════════════╦══════════════════════╦═══════════════════╗");
+                Console.WriteLine("║  ID    ║  Nome do Produto    ║  Preço     ║  Quantidade     ║  Nome do Cliente     ║  Data da Venda    ║");
+                Console.WriteLine("╠════════╬═════════════════════╬════════════╬═════════════════╬══════════════════════╬═══════════════════╣");
+
+                // Dados dos produtos, clientes e vendas (simulando uma lista de vendas)
+                foreach (var venda in vendas)
+                {
+                    Console.WriteLine($"║  {venda.Id,-3}   ║  {venda.Produto.Nome,-15}    ║  R${venda.Produto.Preco,-8}║  {venda.Produto.Quantidade,-10}     ║  {venda.Cliente.Nome,-15}     ║  {venda.Data:dd/MM/yyyy,-14}   ║");
+                }
+
+                // Linha de rodapé
+                Console.WriteLine("╚════════╩═════════════════════╩════════════╩═════════════════╩══════════════════════╩═══════════════════╝");
+
+                // Menu para sair ou continuar
+                Console.WriteLine("\nDigite 0 para sair ou qualquer outro número para gerar o relatório novamente.");
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    opcao = -1; // Caso a entrada seja inválida, continua o loop
+                }
+            } while (opcao != 0);
+        }
+
+
+
+
+
         // Menu Produtos
         static void MenuProdutos()
         {
@@ -70,18 +123,21 @@ namespace SistemaGerenciamentoPadaria
             do
             {
                 Console.Clear();
-                Console.WriteLine("==============================================");
-                Console.WriteLine("========   GERENCIAR PRODUTOS   ==============");
-                Console.WriteLine("=============   DA PADARIA  ==================");
-                Console.WriteLine("==============================================\n");
-                Console.WriteLine("1. Adicionar Produto");
-                Console.WriteLine("2. Listar Produtos");
-                Console.WriteLine("3. Atualizar Produto");
-                Console.WriteLine("4. Remover Produto");
-                Console.WriteLine("0. Voltar");
-                Console.WriteLine($"Autor: Zelita Lima");
-                Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-                Console.WriteLine("==============================================\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+                Console.WriteLine("║             GERENCIAR PRODUTOS DA PADARIA             ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("║1. Adicionar Produto                                   ║");
+                Console.WriteLine("║2. Listar Produtos                                     ║");
+                Console.WriteLine("║3. Atualizar Produto                                   ║");
+                Console.WriteLine("║4. Remover Produto                                     ║");
+                Console.WriteLine("║0. Voltar                                              ║");
+                Console.WriteLine($"║Autor: Zelita Lima                                     ║");
+                Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -115,12 +171,16 @@ namespace SistemaGerenciamentoPadaria
         static void AdicionarProduto()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("======     ADICIONAR NOVO PRODUTO   ==========");
-            Console.WriteLine("===========    PARA A PADARIA    =============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                 ADICIONAR NOVO PRODUTO                ║");
+            Console.WriteLine("║                    PARA A PADARIA                     ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o nome do produto: ");
             string nome = Console.ReadLine();
 
@@ -159,16 +219,19 @@ namespace SistemaGerenciamentoPadaria
             Console.WriteLine("\nProduto adicionado com sucesso!");
             SalvarDados();
         }
-
         static void ListarProdutos()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========      LISTA DE PRODUTOS    =========");
-            Console.WriteLine("=============      NA PADARIA    =============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                            LISTA DE PRODUTO                         ║");
+            Console.WriteLine("║                               NA PADARIA                            ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                                       ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
 
             if (produtos.Count == 0)
             {
@@ -176,22 +239,36 @@ namespace SistemaGerenciamentoPadaria
             }
             else
             {
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔══════════╦══════════════════════════╦═══════════════╦═══════════════╗");
+                Console.WriteLine("║   ID     ║   Nome                   ║  Preço        ║   Estoque     ║");
+                Console.WriteLine("╠══════════╬══════════════════════════╬═══════════════╬═══════════════╣");
+
+                // Dados dos produtos
                 foreach (var produto in produtos)
                 {
-                    Console.WriteLine($"ID: {produto.Id} - Nome: {produto.Nome} - Preço: R${produto.Preco} - Estoque: {produto.Quantidade}");
+                    Console.WriteLine($"║  {produto.Id,-3}     ║ {produto.Nome,-20}     ║ R${produto.Preco,-8}    ║ {produto.Quantidade,-10}    ║");
                 }
+
+                // Linha de rodapé
+                Console.WriteLine("╚══════════╩══════════════════════════╩═══════════════╩═══════════════╝");
             }
         }
+
+
 
         static void AtualizarProduto()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========   ATUALIZAR PRODUTOS  =============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                  ATUALIZAR PRODUTOS                   ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o ID do produto a ser atualizado: ");
             string idStr = Console.ReadLine();
 
@@ -241,12 +318,15 @@ namespace SistemaGerenciamentoPadaria
         static void RemoverProduto()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========   REMOVER PRODUTOS  ===============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                   REMOVER PRODUTOS                    ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o ID do produto a ser removido: ");
             string idStr = Console.ReadLine();
 
@@ -279,18 +359,22 @@ namespace SistemaGerenciamentoPadaria
             do
             {
                 Console.Clear();
-                Console.WriteLine("==============================================");
-                Console.WriteLine("==========   GERENCIAR CLIENTES   ============");
-                Console.WriteLine("===============   DA PADARIA   =================");
-                Console.WriteLine("==============================================\n");
-                Console.WriteLine("1. Adicionar Cliente");
-                Console.WriteLine("2. Listar Clientes");
-                Console.WriteLine("3. Atualizar Cliente");
-                Console.WriteLine("4. Remover Cliente");
-                Console.WriteLine("0. Voltar");
-                Console.WriteLine($"Autor: Zelita Lima");
-                Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-                Console.WriteLine("==============================================\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                  GERENCIAR CLIENTES                   ║");
+                Console.WriteLine("║                      DA PADARIA                       ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("║1. Adicionar Cliente                                   ║");
+                Console.WriteLine("║2. Listar Clientes                                     ║");
+                Console.WriteLine("║3. Atualizar Cliente                                   ║");
+                Console.WriteLine("║4. Remover Cliente                                     ║");
+                Console.WriteLine("║0. Voltar                                              ║");
+                Console.WriteLine($"║Autor: Zelita Lima                                     ║");
+                Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -324,11 +408,15 @@ namespace SistemaGerenciamentoPadaria
         static void AdicionarCliente()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("=====     ADICIONAR NOVOS CLIENTES   ==========");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║              ADICIONAR NOVOS CLIENTES                 ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o nome do cliente: ");
             string nome = Console.ReadLine();
 
@@ -349,11 +437,15 @@ namespace SistemaGerenciamentoPadaria
         static void ListarClientes()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========      LISTA DE CLIENTES    =========");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                           LISTA DE CLIENTES                        ║");
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                                       ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
 
             if (clientes.Count == 0)
             {
@@ -361,22 +453,37 @@ namespace SistemaGerenciamentoPadaria
             }
             else
             {
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔═════════╦══════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║ ID      ║ Nome                                                     ║");
+                Console.WriteLine("╠═════════╬══════════════════════════════════════════════════════════╣");
+
+                // Dados dos clientes
                 foreach (var cliente in clientes)
                 {
-                    Console.WriteLine($"ID: {cliente.Id} - Nome: {cliente.Nome}");
+                    Console.WriteLine($"║ {cliente.Id,-3}     ║ {cliente.Nome,-28}                             ║");
                 }
+
+                // Linha de rodapé
+                Console.WriteLine("╚═════════╩══════════════════════════════════════════════════════════╝");
             }
         }
+
+
+
 
         static void AtualizarCliente()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========   ATUALIZAR CLIENTES  =============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                  ATUALIZAR CLIENTES                   ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o ID do cliente a ser atualizado: ");
             string idStr = Console.ReadLine();
 
@@ -415,12 +522,15 @@ namespace SistemaGerenciamentoPadaria
         static void RemoverCliente()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========   REMOVER CLIENTES  ===============");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                   REMOVER CLIENTES                    ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Digite o ID do cliente a ser removido: ");
             string idStr = Console.ReadLine();
 
@@ -453,16 +563,20 @@ namespace SistemaGerenciamentoPadaria
             do
             {
                 Console.Clear();
-                Console.WriteLine("==============================================");
-                Console.WriteLine("==========   GERENCI AR VENDAS   ==============");
-                Console.WriteLine("=============   DA PADARIA   =================");
-                Console.WriteLine("==============================================\n");
-                Console.WriteLine("1. Registrar Venda");
-                Console.WriteLine("2. Listar Vendas");
-                Console.WriteLine("0. Voltar");
-                Console.WriteLine($"Autor: Zelita Lima");
-                Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-                Console.WriteLine("==============================================\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                   GERENCIAR VENDAS                    ║");
+                Console.WriteLine("║                      DA PADARIA                       ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("║1. Registrar Venda                                     ║");
+                Console.WriteLine("║2. Listar Vendas                                       ║");
+                Console.WriteLine("║0. Voltar                                              ║");
+                Console.WriteLine($"║Autor: Zelita Lima                                     ║");
+                Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -490,12 +604,15 @@ namespace SistemaGerenciamentoPadaria
         static void RegistrarVenda()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("=========   REGISTRAR NOVAS VENDAS   ==========");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║               REGISTRAR NOVAS VENDAS                  ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             ListarClientes();
             Console.Write("\nDigite o ID do cliente: ");
             string clienteIdStr = Console.ReadLine();
@@ -562,15 +679,18 @@ namespace SistemaGerenciamentoPadaria
             Console.WriteLine("\nVenda registrada com sucesso!");
             SalvarDados();
         }
-
         static void ListarVendas()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========      LISTA DE VENDAS     ==========");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                              LISTA DE VENDAS                           ║");
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
 
             if (vendas.Count == 0)
             {
@@ -578,24 +698,37 @@ namespace SistemaGerenciamentoPadaria
             }
             else
             {
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔═════╦════════════════╦═══════════════════╦════════════╦════════════════╗");
+                Console.WriteLine("║ ID  ║ Cliente        ║ Produto           ║ Quantidade ║ Data           ║");
+                Console.WriteLine("╠═════╬════════════════╬═══════════════════╬════════════╬════════════════╣");
+
+                // Dados das vendas
                 foreach (var venda in vendas)
                 {
-                    Console.WriteLine($"ID: {venda.Id} - Cliente: {venda.Cliente.Nome} - Produto: {venda.Produto.Nome} - Quantidade: {venda.Quantidade} - Data: {venda.Data}");
+                    Console.WriteLine($"║{venda.Id,-3}  ║{venda.Cliente.Nome,-15} ║ {venda.Produto.Nome,-17} ║ {venda.Quantidade,-10} ║ {venda.Data:dd/MM/yyyy,-14} ║");
                 }
+
+                // Linha de rodapé
+                Console.WriteLine("╚═════╩════════════════╩═══════════════════╩════════════╩════════════════╝");
             }
         }
+
 
         // Funções de Gerenciamento de Estoque
         static void GerenciarEstoque()
         {
             Console.Clear();
-            Console.WriteLine("==============================================");
-            Console.WriteLine("==========   GERENCIAR ESTOQUE   =============");
-            Console.WriteLine("=============   DA PADARIA   =================");
-            Console.WriteLine("==============================================");
-            Console.WriteLine($"Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("==============================================");
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                   GERENCIAR ESTOQUE                   ║");
+            Console.WriteLine("║                      DA PADARIA                       ║");
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"║Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                          ║");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
+            Console.ForegroundColor = ConsoleColor.White;
             ListarProdutos();
 
             Console.Write("\nDigite o ID do produto para atualizar o estoque: ");
